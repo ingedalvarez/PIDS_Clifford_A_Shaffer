@@ -53,7 +53,7 @@ public class LList<E> implements List<E> {
     }
 
     @Override
-    public void modeToEnd() {       //set curr at list tail
+    public void moveToEnd() {       //set curr at list tail
         curr = tail;
     }
 

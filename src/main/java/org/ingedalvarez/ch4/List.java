@@ -38,7 +38,7 @@ public interface List <E>{
     /**
      * Set the current position to the end of the list
      */
-    public void modeToEnd();
+    public void moveToEnd();
 
     /**
      * Move the current position one step left. No change

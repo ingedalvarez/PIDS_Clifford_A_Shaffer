@@ -18,7 +18,7 @@ public class AList<E> implements List<E> {
     /** Create a new list object.
      @param size Max number of elements list can contain.
      */
-    @SuppressWarnings("unchecked") // Generic array allocation
+    @SuppressWarnings("unchecked")   //Generic array allocation
     AList(int size) {
         maxSize = size;
         listSize = curr = 0;
@@ -49,12 +49,12 @@ public class AList<E> implements List<E> {
     public void append(E it) {
         assert listSize<maxSize: "List capacity exceeded";
         listArray[listSize++] = it;
+
     }
     //remove and return current element.
     @Override
     public E remove() {
-        if((curr<0) || curr>listSize){ //no current element
-        return null;}
+        if((curr<0) || curr>listSize){return null;} //no current element
 
         E it = listArray[curr]; //copy the element.
         for(int i = curr; i < listSize-1; i++){
@@ -70,7 +70,7 @@ public class AList<E> implements List<E> {
     }
 
     @Override
-    public void modeToEnd() {
+    public void moveToEnd() {
         curr = listSize;
     }
 
