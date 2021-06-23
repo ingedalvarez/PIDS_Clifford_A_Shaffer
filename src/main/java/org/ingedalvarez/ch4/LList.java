@@ -5,21 +5,21 @@ public class LList<E> implements List<E> {
     Link<E> head;      //Pointer to list header
     Link<E> tail;      //Pointer to list tail
     Link<E> curr;     //Access to current element
-    int cnt;
+    int cnt;           //size of list
 
     //Constructor
     public LList(int size){
         this();
     }
     public LList(){
-        curr = tail = head = new Link<E>(null);
+        curr = tail = head = new Link<E>(null); //create header.
         cnt = 0;
     }
 
     @Override
     public void clear() {       //remove all elements
         head.setNext(null);     //Drop acces to links.
-        curr = tail = head = new Link<E>(null);
+        curr = tail = head = new Link<E>(null); //create header.
         cnt = 0;
 
     }
@@ -35,6 +35,9 @@ public class LList<E> implements List<E> {
     public void append(E it) {    //append it to list.
         tail = tail.setNext(new Link<E>(it, null));
         cnt++;
+        Link<E> node = new Link<E>(it, null);
+        tail.setNext(node);
+        tail = node;
     }
 
     @Override

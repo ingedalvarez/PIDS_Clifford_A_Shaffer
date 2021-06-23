@@ -16,13 +16,13 @@ public class Link<E> {      //Singly linked list node
     public Link<E> next(){
         return next;
     }
-    public E element(){
-        return element;
-    }
     public Link<E> setNext(Link<E> nextVal){
         return next = nextVal;
     }
     public E setElement(E it){
         return element = it;
+    }
+    public E element(){
+        return element;
     }
 }

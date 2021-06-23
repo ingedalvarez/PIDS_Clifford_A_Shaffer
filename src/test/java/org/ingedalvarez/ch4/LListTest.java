@@ -8,7 +8,6 @@ import static org.junit.Assert.*;
 
 public class LListTest {
     LList<String> list;
-    Link<String> node1, node2, node3, node4, node5;
 
     @Before
     public void setUp() throws Exception {
@@ -38,12 +37,11 @@ public class LListTest {
         assertNotNull(list);
 
         assertEquals(0, list.length());
-        assertEquals(list.head, list.tail);
-        assertEquals(list.tail, list.curr);
         list.insert("A");
         assertEquals(1, list.length());
         assertNotEquals(list.tail, list.curr);
         assertNotEquals(list.tail, list.head);
+        assertEquals(list.head, list.curr);
         assertEquals("A", list.head.next().element());
         assertEquals("A", list.curr.next().element());
         assertEquals("A", list.tail.element());
@@ -59,6 +57,7 @@ public class LListTest {
         assertEquals("A", list.tail.element());
         assertNull(list.head.element());
         assertNull(list.curr.element());
+        assertEquals(list.head, list.curr);
 
 
     }
@@ -109,10 +108,17 @@ public class LListTest {
         list.insert("E");
         list.insert("I");
         assertEquals(0, list.currPos());
+        assertNull(list.curr.element());
+        assertNull(list.tail.next());
+        assertEquals("A", list.tail.element());
         list.moveToPos(2);
         assertEquals(2, list.currPos());
+        assertNotEquals(list.head, list.curr);
+        assertEquals("E", list.curr.element());
+        assertNull(list.head.element());
         list.moveToStart();
         assertEquals(0, list.currPos());
+        assertEquals(list.head, list.curr);
 
 
     }

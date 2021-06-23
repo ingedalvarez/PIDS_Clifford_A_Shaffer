@@ -54,7 +54,7 @@ public class AList<E> implements List<E> {
     //remove and return current element.
     @Override
     public E remove() {
-        if((curr<0) || curr>listSize){return null;} //no current element
+        if((curr<0) || curr>=listSize){return null;} //no current element
 
         E it = listArray[curr]; //copy the element.
         for(int i = curr; i < listSize-1; i++){
