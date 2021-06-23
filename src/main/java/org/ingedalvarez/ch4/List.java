@@ -12,17 +12,17 @@ public interface List <E>{
      * Insert an element at the current location. The client
      * is responsible for ensuring that the list’s capacity
      * is not exceeded.
-     * @param item The element to be inserted.
+     * @param it The element to be inserted.
      */
-    public void insert(E item);
+    public void insert(E it);
 
     /**
      * Append an element at the end of the list. The client
      * is responsible for ensuring that the list’s capacity
      * is not exceeded.
-     * @param item The element to be appended.
+     * @param it The element to be appended.
      */
-    public void append(E item);
+    public void append(E it);
 
     /**
      * Remove and return the current element.

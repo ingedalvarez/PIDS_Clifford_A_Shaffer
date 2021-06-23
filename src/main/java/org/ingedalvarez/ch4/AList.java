@@ -96,7 +96,7 @@ public class AList<E> implements List<E> {
 
     @Override
     public void moveToPos(int pos) {
-        assert pos>=0 && pos <= listSize: "Pos out of range.";
+        assert pos>=0 && pos < listSize: "Pos out of range.";
         curr = pos;
     }
 
