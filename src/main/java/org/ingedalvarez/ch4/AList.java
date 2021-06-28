@@ -66,7 +66,7 @@ public class AList<E> implements List<E> {
 
     @Override
     public void moveToStart() {
-        curr = 0;           //reset position.
+        curr = 0;
     }
 
     @Override

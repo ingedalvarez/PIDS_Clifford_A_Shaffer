@@ -95,7 +95,7 @@ public class LListTest {
         assertEquals("A", list.head.next().element());
         assertEquals("I", list.tail.element());
         assertEquals(3, list.length());
-        list.remove();
+        assertEquals("A", list.remove());
         assertEquals("E", list.head.next().element());
         assertEquals("I", list.tail.element());
         assertEquals(2, list.length());
