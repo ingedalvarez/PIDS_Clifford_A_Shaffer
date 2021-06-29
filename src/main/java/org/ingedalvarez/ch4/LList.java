@@ -2,10 +2,10 @@ package org.ingedalvarez.ch4;
 
 public class LList<E> implements List<E> {
 
-    Link<E> head;      //Pointer to list header
-    Link<E> tail;      //Pointer to list tail
-    Link<E> curr;     //Access to current element
-    int cnt;           //size of list
+    private Link<E> head;      //Pointer to list header
+    private Link<E> tail;      //Pointer to list tail
+    private Link<E> curr;     //Access to current element
+    private int cnt;           //size of list
 
     //Constructor
     public LList(int size){
