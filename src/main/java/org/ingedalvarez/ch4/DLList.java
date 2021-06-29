@@ -28,6 +28,8 @@ public class DLList<E> implements List<E> {
         head.setPrev(null);
         tail.setPrev(null);
         tail.setNext(null);
+        curr.setNext(null);
+        curr.setPrev(null);
         head = curr = new DLink<>(null, null);
         tail = new DLink<>(null, head);
         head.setNext(tail);
@@ -44,13 +46,14 @@ public class DLList<E> implements List<E> {
      */
     @Override
     public void insert(E it) {
-        curr.setNext(new DLink<>(it, curr.next(), curr));
+        curr.setNext(new DLink<E>(it, curr.next(), curr));
         if (curr.next().next() != null) {
             curr.next().next().setPrev(curr.next());
         }
         if (tail == curr) {
             tail = curr.next();
         }
+        cnt++;
     }
 
     /**
@@ -98,7 +101,7 @@ public class DLList<E> implements List<E> {
      */
     @Override
     public void moveToEnd() {
-        curr = tail;
+        curr = tail.prev();
     }
 
     /**
@@ -107,7 +110,7 @@ public class DLList<E> implements List<E> {
      */
     @Override
     public void prev() {
-        curr = curr.prev();
+        if(curr != head)curr = curr.prev();
     }
 
     /**
@@ -116,7 +119,7 @@ public class DLList<E> implements List<E> {
      */
     @Override
     public void next() {
-        curr = curr.next();
+        if(curr != tail)curr = curr.next();
     }
 
     /**
@@ -134,7 +137,7 @@ public class DLList<E> implements List<E> {
     public int currPos() {
         int i;
         DLink<E> temp = head;
-        for(i = 0; temp != curr;){
+        for(i = 0; temp != curr; i++){
             temp = temp.next();
         }
         return i;
