@@ -24,12 +24,7 @@ public class DLList<E> implements List<E> {
      */
     @Override
     public void clear() {
-        head.setNext(null);
-        head.setPrev(null);
-        tail.setPrev(null);
-        tail.setNext(null);
-        curr.setNext(null);
-        curr.setPrev(null);
+        head = tail = curr = null;
         head = curr = new DLink<>(null, null);
         tail = new DLink<>(null, head);
         head.setNext(tail);
