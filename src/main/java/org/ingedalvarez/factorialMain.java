@@ -21,7 +21,7 @@ public class factorialMain
         System.out.println(factAStack(n));
     }
 
-    static long factRecu(int n){
+    static long factRecu(int n){        //recursive algorithm.
         assert (n >= 0) && (n <= 20) : "n out of range";
         if(n == 0) {
             System.out.println("Call to factRecu of : "+ n);
@@ -33,7 +33,7 @@ public class factorialMain
         }
     }
 
-    static long factBucle(int n){
+    static long factBucle(int n){       //iterative algorithm.
         assert (n >= 0) && (n <= 20) : "n out of range";
         long fact = 1;
         for(int i = 1; i <= n; i++){
@@ -43,7 +43,7 @@ public class factorialMain
         return fact;
     }
 
-    static long factAStack(int n){
+    static long factAStack(int n){          //AStack algorithm.
         // To fit n! in a long variable, require n < 21
         assert (n >= 0) && (n <= 20) : "n out of range";
         // Make a stack just big enough
