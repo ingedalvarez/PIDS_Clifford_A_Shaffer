@@ -18,11 +18,11 @@ public class factorialMain
     static long factRecu(int n){
         assert (n >= 0) && (n <= 20) : "n out of range";
         if(n == 0) {
-            System.out.println("Llamada a factRecu de : "+ n);
+            System.out.println("Call to factRecu of : "+ n);
             return 1;
         }
         else{
-            System.out.println("Llamada a factRecu de : "+ n);
+            System.out.println("Call to factRecu of : "+ n);
             return n * factRecu(n-1);
         }
     }
@@ -32,7 +32,7 @@ public class factorialMain
         long fact = 1;
         for(int i = 1; i <= n; i++){
             fact = fact * (i);
-            System.out.println("Iteracion numero "+ i);
+            System.out.println("Iteration No. "+ i);
         }
         return fact;
     }
@@ -43,12 +43,12 @@ public class factorialMain
         // Make a stack just big enough
         Stack<Integer> S = new AStack<Integer>(n);
         while (n > 1) {
-            System.out.println("llamada al primer while ");
+            System.out.println("Call to first while. ");
             S.push(n--);
         }
         long result = 1;
         while (S.length() > 0) {
-            System.out.println("llamada al segundo while ");
+            System.out.println("Call to second while. ");
             result = result * S.pop();
         }
         return result;
