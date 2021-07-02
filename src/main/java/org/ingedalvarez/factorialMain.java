@@ -9,10 +9,10 @@ public class factorialMain
     public static void main( String[] args )
     {
         System.out.println( "Some exercises." );
-
-        System.out.println(factRecu(7));
-        System.out.println(factBucle(7));
-        System.out.println(factAStack(7));
+        int n = 7;
+        System.out.println(factRecu(n));
+        System.out.println(factBucle(n));
+        System.out.println(factAStack(n));
     }
 
     static long factRecu(int n){
