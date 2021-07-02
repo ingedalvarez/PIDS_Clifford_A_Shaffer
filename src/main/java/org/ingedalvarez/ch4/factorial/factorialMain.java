@@ -1,4 +1,4 @@
-package org.ingedalvarez.ch4;
+package org.ingedalvarez.ch4.factorial;
 
 
 import org.ingedalvarez.ch4.AStack;
