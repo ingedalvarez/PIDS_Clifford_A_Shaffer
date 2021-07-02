@@ -4,6 +4,12 @@ package org.ingedalvarez;
 import org.ingedalvarez.ch4.AStack;
 import org.ingedalvarez.ch4.Stack;
 
+    /*
+    In practice, an iterative form of the factorial function (method factBucle) would be both simpler
+    and faster than the version shown in method factAStack. Unfortunately, it is not always
+    possible to replace recursion with iteration.
+    */
+
 public class factorialMain
 {
     public static void main( String[] args )
