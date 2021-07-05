@@ -9,6 +9,10 @@ public class AStack<E> implements Stack<E>{
     public AStack(){
         this(defaultSize);
     }
+
+
+
+
     @SuppressWarnings("unchecked")
     public AStack(int size){
         maxSize = size;
@@ -64,4 +68,5 @@ public class AStack<E> implements Stack<E>{
     public int length() {
         return top;
     }
+
 }

@@ -11,7 +11,7 @@ public class AList<E> implements List<E> {
     /**
      * Create a list with the default capacity.
      */
-    AList() {
+    public AList() {
         this(defaultSize);
     }
 
@@ -19,7 +19,7 @@ public class AList<E> implements List<E> {
      @param size Max number of elements list can contain.
      */
     @SuppressWarnings("unchecked")   //Generic array allocation
-    AList(int size) {
+    public AList(int size) {
         maxSize = size;
         listSize = curr = 0;
         listArray = (E[])new Object[size];
