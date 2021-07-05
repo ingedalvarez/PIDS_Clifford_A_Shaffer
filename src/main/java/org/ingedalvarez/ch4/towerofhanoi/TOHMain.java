@@ -3,7 +3,7 @@ package org.ingedalvarez.ch4.towerofhanoi;
 public class TOHMain {
     public static void main(String[] args) {
         int calls = 0;
-        int n = 2;
+        int n = 3;
         Pole start, goal, temp;
 
         start = new Pole("start", n);
